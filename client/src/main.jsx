@@ -18,7 +18,8 @@ import {
 // axios default settings
 import axios from "axios";
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "http://localhost:8000/api";
+axios.defaults.baseURL =
+  "https://mystackoverflowhiddenbydefault.onrender.com/api";
 
 // components and  pages
 // import IndexPage from "./pages/IndexPage.jsx";
