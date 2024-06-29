@@ -1,0 +1,9 @@
+# dependencies 
+**/node_modules
+
+# production
+
+# misc
+/node_modules
+node_modules
+.env

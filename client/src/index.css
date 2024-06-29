@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    
+    #root {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        min-height: 100vh;
+        --dark: #141516;
+        --light: #dde0e0;
+        --yellow: #F4CE14;
+        --green: #495E57,
+        --white: #eeeeee;
+    }
+    
+    *, *::before, *::after {
+        /* border: solid 1px red; */
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: monospace;
+        @apply text-dark;
+        @apply w-full;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 35px;
+    }
+
+    .btn {
+        @apply w-full sm:w-auto rounded-md;
+        padding: 10px 45px;
+    }
+    
+    .btn--light {
+        @apply bg-dark border border-light;
+        @apply hover:bg-light hover:text-dark;
+    }
+
+    .btn--dark {
+        @apply bg-dark text-white hover:bg-white hover:text-dark border border-dark;
+    }
+    .btn--yellow {
+        @apply bg-dark text-yellow hover:bg-yellow hover:text-dark border border-yellow;
+        @apply transition-all duration-300 ;
+    }
+
+    .btn--green {
+        @apply hover:bg-green hover:text-light bg-light text-green border border-green;
+    }
+
+
+    .wrapper {
+        @apply w-full max-w-[1440px] mx-auto;
+    }
+
+    .note {
+        @apply bg-dark text-light;
+        @apply border border-opacity-100 p-2 rounded-sm;
+        @apply flex flex-col justify-between gap-y-2;
+        @apply cursor-pointer;
+        @apply flex-1 ;
+        @apply h-[200px];
+        @apply overflow-scroll;
+        @apply shadow-md;
+        scrollbar-width: none;
+    }
+
+    /* .note:hover {
+
+        box-shadow: 8px 8px 0 var(--green);
+        transition: all ease-in-out .2s;
+    } */
+    
+    .title {
+        @apply text-green text-lg font-semibold;
+    }
+
+    .tag {
+        @apply px-2 font-semibold text-pretty text-sm bg-yellow text-green;
+    }
+
+    .form {
+        @apply flex flex-col gap-y-4 padding-x py-6 absolute inset-0 bg-light z-10 h-screen;
+        animation: slideDown forwards 0.3s ;
+    }
+
+    .form--input {
+        @apply w-full flex flex-col;        
+    }
+    
+    .form--input input, .form--input textarea {
+        @apply border p-2;
+        box-shadow: -2px 2px 0 var(--dark);
+        scrollbar-width: none;
+        outline: none
+    }
+
+    .form input {
+        @apply p-2;
+    }
+
+    .form--btn {
+        @apply flex gap-x-2;
+    }
+
+    .form--editor {
+        @apply bg-light flex flex-col justify-between gap-y-2 ;
+    }
+
+    .form--editor .textarea {
+        @apply h-[500px];
+    }
+
+    .form .textarea {
+        @apply bg-light m-0 p-2 text-[14px] ;
+        scrollbar-width: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+    }
+
+    .search:hover {
+        @apply rounded-md transition-shadow duration-300;
+        z-index: 5;
+        box-shadow: 0 0 0 2px #F4CE14;
+        cursor: pointer;
+    }
+
+}
+
+@layer utilities {
+    .padding-x {
+        @apply px-4 sm:px-6;
+    }
+
+    .padding-y {
+        @apply py-6 sm:py-12;
+    }
+
+}
+
+
+@keyframes slideDown {
+    from {
+        display: hidden;
+        height: 0%;
+        top: -500px;
+    }
+    
+    to {
+        display: flex;
+        top: 0;
+        min-height: 100vh;
+        /* min-height: 100vh; */
+        /* transform:translateX(100%); */
+        
+    }
+}
+
