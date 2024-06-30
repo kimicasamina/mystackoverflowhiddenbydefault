@@ -20,9 +20,8 @@ import axios from "axios";
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL =
   "https://mystackoverflowhiddenbydefault.onrender.com/api";
-
 // components and  pages
-// import IndexPage from "./pages/IndexPage.jsx";
+import IndexPage from "./pages/IndexPage.jsx";
 import Signup from "./pages/Signup.jsx";
 import Login from "./pages/Login.jsx";
 import ProtectedRoute from "./pages/ProtectedRoute.jsx";

@@ -72,9 +72,9 @@ function App() {
 
   return (
     <>
-      <div className="relative w-full h-screen bg-white grid">
+      <div className="relative w-full h-screen bg-neutral-200 grid">
         <Nav setToggleAdd={setToggleAdd} />
-        <main className="mt-[80px] padding-y w-full max-w-[1440px] mx-auto px-4 md:px-10 bg-white ">
+        <main className="mt-[80px] padding-y  w-full max-w-[1440px] mx-auto px-4 md:px-10 bg-neutral-900 ">
           <Outlet />
         </main>
       </div>
